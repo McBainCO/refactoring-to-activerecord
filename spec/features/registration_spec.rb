@@ -12,6 +12,7 @@ feature "Registration and authentication" do
     expect(page).to have_content "Password is required"
 
     fill_in "Username", with: "hoonta"
+    save_and_open_page
     fill_in "Password", with: "t0p"
     click_button "Register"
 

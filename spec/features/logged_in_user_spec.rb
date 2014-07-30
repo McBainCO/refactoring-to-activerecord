@@ -19,8 +19,9 @@ feature "Logged in user" do
     visit "/"
 
     register_user("hoonta", "t0psecret")
-
+    save_and_open_page
     fill_in "Username", with: "hoonta"
+
     fill_in "Password", with: "t0psecret"
 
     click_button "Sign In"
